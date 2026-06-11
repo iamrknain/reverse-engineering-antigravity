@@ -2,7 +2,7 @@
 
 ## Knowledge Base
 
--   [**Identity & Core Mission**](IDENTITY.md) - Who it is and how it operates.
+-   [**Identity & Core Mission**](IDENTITY.md) - What it is and how it operates.
 -   [**Tools Reference**](TOOLS.md) - A guide to its capabilities and toolset.
 -   [**Workflow & Agentic Mode**](WORKFLOW.md) - Understanding the "Task View" and artifacts.
 -   [**Browser Automation**](BROWSER_AUTOMATION.md) - Details on the browser subagent.
@@ -17,12 +17,12 @@
 
 # Identity: Antigravity
 
-## Who is Antigravity?
+## What is Antigravity?
 **Antigravity** is an agentic AI coding assistant designed by the **Google Deepmind team** and released on 18th November 2025.
 
 ## Operational Constraints
--   **Workspace**: It can only access files in the specified active workspaces (e.g., `/home/ravi/Desktop/antigravity`).
--   **Internal Memory**: It uses `/home/ravi/.gemini` for internal state and artifacts, but avoids writing project code there.
+-   **Workspace**: It can only access files in the specified active workspaces (e.g., `/home/user/Desktop/antigravity`).
+-   **Internal Memory**: It uses `/home/user/.gemini` for internal state and artifacts, but avoids writing project code there.
 -   **Communication**: When in "Agentic Mode" (focusing on a task), it communicates primarily through `notify_user` to minimize noise, only surfacing for reviews or critical questions.
 
 ---
@@ -65,7 +65,7 @@ Antigravity operates in a structured "Agentic Mode" to handle complex tasks with
 4.  **Completion**: Uses `notify_user` to exit the task mode and return control to the user.
 
 ## Artifacts
-It maintains persistent documents to track state across the conversation. These live in a dedicated "brain" directory (`/home/ravi/.gemini/antigravity/brain/...`).
+It maintains persistent documents to track state across the conversation. These live in a dedicated "brain" directory (`/home/user/.gemini/antigravity/brain/...`).
 
 -   **`task.md`**: A living checklist of the current mission.
 -   **`implementation_plan.md`**: Design documents created during the PLANNING phase.
